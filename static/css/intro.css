@@ -1,0 +1,284 @@
+/* --------- global ruls ------------ */
+:root{
+    --main-color :#f6a21e ;
+    --gradientColor: linear-gradient(45deg, #f6a21e 60%,#e55b13);
+    -colorLightOFF:#a4a39dff;
+    -colorLightOFF2:#c8c4c5ff;
+    --background: #feffefff;
+    --font:'Source Sans Pro', sans-serif;
+    --font2:'Ubuntu', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--background);
+    font-family: var(--font);
+    font-family: var(--font2);
+}
+body.introPage{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+.container.login{
+    background: var(--gradientColor);
+}
+html.introPage{
+    overflow: hidden;
+}
+/* ------------ first page ----------- */
+.container .oops{
+    display: flex;
+    transition: .3s;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-40%,-50%);
+    user-select: none;
+}
+.container .oops.GoTop{
+    top: 7%;
+    left: 50%;
+    margin: 0 auto;
+    width: fit-content;
+}
+.container h1 strong{
+    transition: 0.3s;
+    position: relative;
+    transform: scale(0);
+}
+.container h1 svg{
+    width: 43px;
+}
+.container h1.animate strong{
+    transform: scale(1);
+}
+.container h1.hit strong{
+    animation: hit .3s ease forwards;
+}
+.container h1 span{
+    position: relative;
+}
+.container h1 span svg{
+    transition: .4s;
+}
+.container h1 span l{
+    width: 2px;
+    height: 8px;
+    background: #f9cc11ff;
+    position: absolute;
+    border-radius: 3px;
+    display: none;
+}
+.container h1 span l:nth-child(1){
+    left: 41px;
+    top: 7px;
+    transform: rotate(84deg);
+}
+.container h1 span l:nth-child(2){
+    left: 35px;
+    top: -5px;
+    transform: rotate(36deg);
+}
+.container h1 span l:nth-child(3){
+    left: 20px;
+    top: -12px;
+    transform: rotate(0deg);
+    height: 9px;
+}
+.container h1 span l:nth-child(4){
+    left: 6px;
+    top: -5px;
+    transform: rotate(-36deg);
+}
+.container h1 span l:nth-child(5){
+    left: -1px;
+    top: 7px;
+    transform: rotate(-84deg);
+}
+.container h1 .PhotoSVG.animate svg{
+    transform: rotate(360deg);
+}
+.container h1 .PhotoSVG.chgColor l{
+    display: block;
+}
+.container h1 .PhotoSVG.chgColor svg g #lightouside path{
+    fill: #f9cc11ff !important;
+}
+.container h1 .PhotoSVG.chgColor g #lightinside circle{
+    fill: #fee36fff !important;
+}
+.container .text{
+    margin-top: 0.6rem;
+    font-size: 14px;
+    color: #73736f;
+    transform: scale(0);
+    transition: .3s;
+}
+.container .text.scale{
+    transform: scale(1);
+}
+.container .text.remove{
+    display: none;
+}
+body::after{
+    content: '';
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -87px;
+    right: -90px;
+    background: var(--gradientColor);
+    border-radius: 50%;
+    /* display: none; */
+}
+body::before{
+    content: '';
+    width: 201px;
+    height: 201px;
+    position: absolute;
+    bottom: -100px;
+    left: -147px;
+    background: var(--gradientColor);
+    border-radius: 50%;
+    /* display: none; */
+}
+@keyframes hit{
+    0%{
+        left: 0;
+    }
+    50%{
+        left: 8px;
+    }
+    100%{
+        left: -5px;
+    }
+}
+/* ------------ loading page -------------- */
+.container .photoIntroduce{
+    display: none;
+    width: 375.2px;
+    height: 330px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.container .photoIntroduce.flex{
+    display: flex;
+}
+.container .photoIntroduce img{
+    width: 230px;
+    transform: scale(0);
+    transition: all .4s;
+}
+.container .photoIntroduce.root img{
+    transform: scale(1);}
+.container .photoIntroduce .photos{
+        text-align: center;
+        height: 100%;
+}
+.container .photoIntroduce .textPhoto{
+    text-align: center;
+    position: relative;
+    top: 24px;
+    height: 38px;
+    padding: 0.7rem;
+}
+.container .loading{
+    background: #e0e0e0;
+    width: 80%;
+    border-radius: 1rem;
+    height: 17px;
+    margin: 0 auto;
+    position: relative;
+    top: 3rem;
+    position: relative;
+    transition: .3s;
+    cursor: pointer;
+    color: transparent;
+}
+.container .loading::before{
+    content: '';
+    width: 0%;
+    height: 100%;
+    background: var(--gradientColor);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+    transition: .3s;
+    animation: load 10s forwards;
+}
+.container .loading.noneBefor::before{
+    display: none;
+}
+/* .container .loading a{
+    display: none;
+    color: white;
+    text-decoration: none;
+}
+.container .loading.getStarted a{
+    display: block;
+} */
+.container .loading.getStarted{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--gradientColor);
+    font-size: 17px;
+    font-weight: bold;
+    width: 40%;
+    border-radius: 11px;
+    padding: 18px;
+    color: white;
+}
+/* animation for loading  */
+@keyframes load{
+    0%{
+        width: 0%;
+    }
+    25%{
+        width: 25%;
+    }
+    75%{
+        width: 75%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+input::placeholder{
+    /* color: var(--main-color); */
+    color: rgba(0, 0, 0, 0.602);
+    font-size: 13px;
+}
+#arrow{
+    height: 40px;
+    position: absolute;
+    right: -40px;
+    top: 58%;
+    padding: 1rem;
+    border-radius: 1rem 0 0 1rem;
+    width: 40px;
+    background: linear-gradient(45deg, #f6a21e 32%,#e55b13);
+    transition: .3s;
+}
+#arrow.show{
+    right: 0px;
+}
+#arrow svg{
+    width: 14px;
+    fill: white;
+    position: relative;
+    top: -4px;
+}

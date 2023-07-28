@@ -1,0 +1,104 @@
+/* ---------- this style it is common between all pages */
+/* --------- global ruls ------------ */
+:root{
+    --main-color :#f6a21e ;
+    --gradientColor: linear-gradient(45deg, #f6a21e 60%,#e55b13);
+    -colorLightOFF:#a4a39dff;
+    -colorLightOFF2:#c8c4c5ff;
+    --background: #feffefff;
+    --font:'Source Sans Pro', sans-serif;
+    --font2:'Ubuntu', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-family: var(--font);
+    font-family: var(--font2);
+}
+.container{
+    height: 100%;
+}
+#send{
+    height: 30px;
+    margin: 0 auto;
+    width: 181px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    background: var(--gradientColor);
+    border: none;
+    padding: 17px 0;
+    border-radius: 16px;
+    font-weight: bold;
+    box-shadow: 3px 3px 5px -6px black;
+    color: white;
+}
+.scurity{
+    position: absolute ;
+    font-size: 13px;
+    width: fit-content;
+    right: 6px;
+    top: 11px;
+    display: none;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+.showorhide{
+    position: absolute;
+    bottom: -20px;
+    right: 8px;
+    display: none;
+}
+.showorhide.block{
+    display: block;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+#checkicon.checking {
+    transform: scale(1);
+}
+#checkicon {
+    fill: green;
+    display: block;
+    transform: scale(0);
+    transition: .3s;
+    position: absolute;
+    top: 33px;
+    width: 13px;
+}
+/* style of message error */
+.errorOops{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    min-width: 100%;
+    background: #f53d6d;
+    padding: 4px 14px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    bottom: -16px;
+    font-size: 10px;
+}
+#iconError svg{
+    display: flex;
+    width: 20px;
+    fill: white;
+    position: relative;
+    top: 0;
+}
+.loginSignUp form span.changPlaceHolder ::placeholder{
+    color: red;
+}

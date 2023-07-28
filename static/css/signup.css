@@ -1,0 +1,277 @@
+/* --------- global ruls ------------ */
+:root{
+    --main-color :#f6a21e ;
+    --gradientColor: linear-gradient(45deg, #f6a21e 60%,#e55b13);
+    -colorLightOFF:#a4a39dff;
+    -colorLightOFF2:#c8c4c5ff;
+    --background: #feffefff;
+    --font:'Source Sans Pro', sans-serif;
+    --font2:'Ubuntu', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: var(--background);
+    font-family: var(--font);
+    font-family: var(--font2);
+}
+.container{
+    background: var(--gradientColor);
+    height: 100%;
+}
+/* ------------ styling sign up ----------- */
+.loginSignUp {
+    transform: translateX(-100%);
+    transition: 0.3s;
+    display: none;
+}
+.loginSignUp.translate{
+    transform: translateX(0%);
+}
+.loginSignUp.Goto{
+    transform: translateX(100%)
+}
+.loginSignUp.clearnone{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.loginSignUp .txt-intro{
+    padding: 0.5rem 0 1rem 1rem;
+    color: white;
+}
+.loginSignUp .txt-intro > span{
+    font-size: 15px;
+    margin-top: 0.5rem;
+    display: block;
+    color: white;
+}
+.loginSignUp .info{
+    background: white;
+    width: 86%;
+    margin: 11px auto 0;
+    padding: 1rem;
+    border-radius: 3rem 3rem 3rem 5px;
+    position: relative;
+    box-shadow: 0px 0px 13px -6px black;
+}
+.loginSignUp .imgUser{
+    width: 80px;
+    height: 84px;
+    position: absolute;
+    border-radius: 3px 50% 50%;
+    background: #f2f2f2;
+    top: -30px;
+    right: 11px;
+    box-shadow: 0px 0px 2px -1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.loginSignUp .imgUser img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 3px 50% 50%;
+}
+.loginSignUp .imgUser .choosePhoto{
+    width: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-direction: row-reverse;
+    background: white;
+    border-radius: 22px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0px 0px 6px -3px black;
+    background-color: rgba(255, 0, 0, 0);
+    transition:.3s;
+}
+.loginSignUp .imgUser .choosePhoto.takeUpload{
+    width: 80px;
+}
+.loginSignUp .imgUser .takePhoto{
+    width: 30px;
+    height: 30px;
+    background: var(--gradientColor);
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0px 0px 11px -7px black;
+    z-index: 1;
+}
+.loginSignUp .imgUser .choosePhoto.takeUpload .takePhoto{
+    position: relative;
+    box-shadow: none;
+}
+.loginSignUp .imgUser .uploadPhoto{
+    width: 40px;
+    height: 40px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.loginSignUp .imgUser .choosePhoto.takeUpload .uploadPhoto{
+    display: flex;
+    background: var(--gradientColor);
+    border-radius: 13px;
+}
+.loginSignUp .imgUser .uploadPhoto svg{
+    width: 18px;
+    fill: #ffffff;
+    position: relative;
+}
+.loginSignUp .imgUser .takePhoto svg{
+    width: 17px;
+    fill: #ffffff;
+}
+.loginSignUp .info h1{
+    margin: 0.8rem 0 1.4rem 1rem;
+    font-size: 22px;
+    color: #0000008c;
+}
+.loginSignUp .info form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+    margin: 0 auto;
+}
+.loginSignUp .info form span{
+    width: 100%;
+    position: relative;
+}
+.loginSignUp .info form span img{
+
+    width: 15px;
+    position: absolute;
+    top: 16px;
+    left: 8px;
+    filter: invert(51%) sepia(0%) saturate(1938%) hue-rotate(152deg) brightness(88%) contrast(96%);
+}
+.loginSignUp .info form span input{
+    width: 252px;
+    height: 48px;
+    border: 1px solid #00000057;
+    outline: none;
+    background: transparent;
+    border-radius: 3px;
+    padding: 0 0 0 2rem;
+    color: black;
+    font-size: 14px;
+}
+.loginSignUp .info form span.warning input{
+    border: 1px solid rgb(204, 16, 16) !important;
+}
+.loginSignUp .info form span svg,
+.loginSignIn .info form span svg,
+.changePassword .info form span svg{
+    display: none;
+    width: 17px;
+    position: absolute;
+    right: 7px;
+    top: 16px;
+    fill: #ed2e2e;
+}
+.loginSignUp .info form span.warning #warn{
+    display: block;
+}
+.loginSignUp .haveAccount{
+    text-align: center;
+    margin-top: 7px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+.loginSignUp .haveAccount a{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+letter{
+    position: relative;
+    top: -8px;
+    font-size: 27px;
+    color: white;
+} 
+.picture{
+    height: 80%;
+    background: #e8e8e8;
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px -2px black;
+    top: 1%;
+    margin: 15% 0;
+    transition: .3s;
+    transform: scale(0);
+}
+.picture.showcamera{
+    transform: scale(1);
+}
+.picture button{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    background: var(--gradientColor);
+    padding: 7px 9px;
+    display: flex !important;
+    align-items: center;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    z-index: 1;
+    cursor: pointer;
+}
+.picture #switch-camera{
+    left: 5rem;
+}
+.picture #take-pic{
+    width: 45px;
+    height: 45px;
+    justify-content: center;
+}
+.picture button svg{
+    fill: white;
+}
+.picture video{
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+}
+.picture #switch-camera{
+    display: none;
+}
+#close{
+    position: absolute;
+    top: -9px;
+    left: 99%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+/* @media (max-width:425px){
+    .picture #switch-camera{
+        display: none;
+    }
+} */

@@ -1,0 +1,122 @@
+/* ----------- stling page code --------- */
+body{
+    background: linear-gradient(45deg, #f6a21e 60%,#e55b13);
+}
+.code .info form span img{
+    width: 13px;
+    position: absolute;
+    top: 13px;
+    left: 8px;
+    filter: invert(51%) sepia(0%) saturate(1938%) hue-rotate(152deg) brightness(88%) contrast(96%);
+}
+.code {
+    transform: scale(0);
+    transition: 0.3s;
+    height: 100%;
+    display: none;
+}
+.code.scale{
+    transform: scale(1);
+}
+.code.clearnone{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.code .txt-intro{
+    padding: 0.5rem 0 1rem 1rem;
+    color: white;
+    text-align: center;
+}
+.code .txt-intro > span{
+    font-size: 15px;
+    margin-top: 0.5rem;
+    display: block;
+    color: white;
+}
+.code .info{
+    background: white;
+    width: 86%;
+    margin: 4.5rem auto 0;
+    padding: 3rem 1rem;
+    border-radius: 3rem 3rem 3rem 5px;
+    position: relative;
+    box-shadow: 0px 0px 13px -6px black;
+}
+.code .info img{
+    display: block;
+    width: 164px;
+    margin: 0 auto 2rem;
+}
+.code .info .envlop{
+    width: 18px;
+    position: absolute;
+    margin: 0;
+    top: 11px;
+    left: 7px;
+    filter: invert(51%) sepia(0%) saturate(1938%) hue-rotate(152deg) brightness(88%) contrast(96%);  
+}
+.code .warning{
+    font-size: 13px;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #0000008c;
+}
+.code .info form{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+.code .info form input{
+    width: 100%;
+    height: 39px;
+    outline: none;
+    background: #e3e3e3;
+    border-radius: 3px;
+    color: #07204e;
+    font-size: 14px;
+    border: none;
+    padding: 0 0 0 2rem;
+}
+.code .info form input[type="submit"]{
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 3rem;
+    background: linear-gradient(45deg, #f6a21e 60%,#e55b13);
+}
+.code .haveAccount{
+    text-align: center;
+    margin-top: 7px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+.code .haveAccount a{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+input#warning{
+    border: 1px solid rgb(204, 16, 16) !important;
+}
+form svg{
+    display: none;
+    width: 17px;
+    position: absolute;
+    right: 7px;
+    top: 11px;
+    fill: #ed2e2e;
+}
+form.warning svg{
+    display: block;
+}
+.errorOops{
+    left: 24%;
+    bottom: 29%;
+    z-index: 1;
+    min-width: 50%;
+}

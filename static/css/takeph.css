@@ -1,0 +1,96 @@
+/* --------- styling page take a photo --------*/
+.container{  
+    background: linear-gradient(45deg, #f6a21e 60%,#e55b13) !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+}
+.container .title{
+    padding: 1rem;
+    line-height: 2.5rem;
+    color: white;
+    position: absolute;
+    top: 1rem;
+}
+.uploadphoto{
+    background: white;
+    width: 90%;
+    margin: 0 auto;
+    border: 2px dashed #3f3d56;
+    padding: 1rem;
+    transform: scale(0);
+    transition: .3s;
+    position: relative;
+}
+.uploadphoto.show{
+    transform: scale(1);
+}
+.uploadphoto button{
+    position: absolute;
+    padding: 2px 7px;
+    border-radius: 50%;
+    border: none;
+    background: #f6a21e;
+    right: 10px;
+    top: 54px;
+}
+.uploadphoto button{
+    position: absolute;
+    padding: 2px 7px;
+    border-radius: 50%;
+    border: none;
+    background: #f6a21e;
+    right: -10px;
+    top: -12px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+.uploadphoto .imgupload img{
+    width: 113px;
+    display: block;
+    margin: 0 auto;
+}
+.uploadphoto .imgupload svg{
+    fill: #3f3d56;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 9rem;
+    width: 62px;
+    left: 35px;
+}
+.uploadphoto .textupload{
+    color: gray;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 2rem;
+}
+.uploadphoto .textupload h1{
+    color: #ff9800;
+    margin-bottom: 2rem;
+    display: none;
+}
+.uploadphoto .uploadandtake{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+.uploadphoto .uploadandtake span {
+    background: #f6a21e;
+    padding: 5px 10px;
+    display: flex;
+    border-radius: 5px;
+}
+.uploadphoto .uploadandtake span svg{
+    width: 20px;
+    fill: #feffefff;
+} 
+@media (min-width:1024px){
+    .uploadphoto .textupload h1{
+        display: block;
+    }
+}

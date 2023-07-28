@@ -1,0 +1,21 @@
+.show-hide-psrd{
+    padding: 3px;
+    position: absolute;
+    left: 85%;
+    top: 25%;
+}
+.show-hide-psrd svg{
+    display: flex !important;
+    position: relative !important;
+    top: -5px !important;
+    right: 0 !important;
+    fill: var(--main-color) !important;
+    pointer-events: none;
+    width: 25px !important;
+}
+.show-hide-psrd.line #lightouside path{
+    fill: rgb(253, 178, 3) !important;
+}
+.show-hide-psrd.line #lightinside circle{
+    fill: #fee36fff !important;
+}

@@ -1,0 +1,153 @@
+body{
+    background: linear-gradient(45deg, #f6a21e 60%,#e55b13);
+}
+/* --------- signin page ------------ */
+.loginSignIn {
+    transform: translateX(-100%);
+    transition: 0.3s;
+    height: 100%;
+    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.loginSignIn.translate{
+    transform: translateX(0%);
+}
+.loginSignIn.Goto{
+    transform: translateX(100%)
+}
+.loginSignIn.clearnone{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.loginSignIn .txt-intro{
+    padding: 0.5rem 0 1rem 1rem;
+    color: white;
+}
+.loginSignIn .txt-intro > span{
+    font-size: 15px;
+    margin-top: 0.5rem;
+    display: block;
+    color: white;
+}
+.loginSignIn .info{
+    background: white;
+    width: 86%;
+    margin: 1.5rem auto 0;
+    padding: 1rem;
+    border-radius: 3rem 3rem 3rem 5px;
+    position: relative;
+    box-shadow: 0px 0px 13px -6px black;
+}
+.loginSignIn .imgUser{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border-radius: 3px 50% 50%;
+    background: #f2f2f2;
+    top: -30px;
+    right: 11px;
+    box-shadow: 0px 0px 2px -1px black;
+}
+.loginSignIn .imgUser .takePhoto{
+    width: 40px;
+    height: 40px;
+    background: white;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0px 0px 11px -7px black;
+}
+.loginSignIn .info h1{
+    margin: 1rem 0 1.4rem;
+    color: #0000008c;
+    font-size: 22px;
+    position: relative;
+    top: -12px;
+}
+.loginSignIn .info form{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: fit-content;
+    margin: 0 auto;
+}
+.loginSignIn .info form span{
+    width: 100%;
+    position: relative;
+}
+.loginSignIn .info form span input{
+    width: 200px;
+    height: 39px;
+    border: 1px solid #00000057;
+    outline: none;
+    background: transparent;
+    border-radius: 3px;
+    padding: 0 2rem 0 2rem;
+    color: black;
+    font-size: 14px;
+}
+.loginSignIn .haveAccount{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+.loginSignIn .haveAccount a{
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+}
+.loginSignIn .forget{
+    font-size: 13px;
+    color: white;
+    text-align: end;
+    margin-bottom: 0.4rem;
+}
+/* -------- forget my password ----------- */
+#forget{
+    font-size: 14px;
+    color: #0000008c;
+    width: fit-content;
+    position: relative;
+    right: -5rem;
+    text-decoration: none;
+}
+body.forget{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.loginSignIn .info form span.warning input{
+    border: 1px solid rgb(204, 16, 16) !important;
+}
+.loginSignIn .info form span svg{
+    display: none;
+    width: 17px;
+    position: absolute;
+    right: 7px;
+    top: 10px;
+    fill: #ed2e2e;
+}
+.loginSignIn .info form span.warning #warn{
+    display: block;
+}
+.loginSignIn .info form span img{
+    width: 13px;
+    position: absolute;
+    top: 13px;
+    left: 8px;
+    filter: invert(51%) sepia(0%) saturate(1938%) hue-rotate(152deg) brightness(88%) contrast(96%);
+}
+.showorhide {
+    position: absolute !important;
+    bottom: 10px !important;
+}

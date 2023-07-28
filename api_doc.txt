@@ -1,0 +1,377 @@
+#------------------- user API ------------------------------------------------------#
+    #------------------- users ---------------------------#
+    url : path/users - GET ONLY
+    auth : no login required
+
+    {
+        'total_users' : 3
+
+        '1' : {
+        'id' : 1 ,
+        'user_name' : 'test1' ,
+        'family_name' : 'test  fam' ,
+        'first_name' : 'test first' ,
+        'email' : 'test1@gmail.com' ,
+        'signup_time' : '10-11-2022 17:15:56 GMT' ,
+        'user_type' : 's' ,
+        }
+
+        '2' : {
+        'id' : 2 ,
+        'user_name' : 'test2' ,
+        'family_name' : 'test  fam' ,
+        'first_name' : 'test first' ,
+        'email' : 'test2@gmail.com' ,
+        'signup_time' : '11-10-2022 17:15:56 GMT' ,
+        'user_type' : 's' ,
+        }
+
+        '3' : {
+        'id' : 3 ,
+        'user_name' : 'test3' ,
+        'family_name' : 'test  fam' ,
+        'first_name' : 'test first' ,
+        'email' : 'test3@gmail.com' ,
+        'signup_time' : '12-05-2022 17:15:56 GMT' ,
+        'user_type' : 's' ,
+        }
+    }
+
+    #------------------- user info ---------------------------#
+    url : path/user/<string:user_name> - GET
+    auth : login required
+
+    {
+        'id' : 3 ,
+        'user_name' : 'test3' ,
+        'family_name' : 'test  fam' ,
+        'first_name' : 'test first' ,
+        'email' : 'test3@gmail.com' ,
+        'signup_time' : '10-11-2022 17:15:56 GMT' ,
+        'user_type' : 's' ,
+
+        created_posts : {
+            'post1' : {
+                'id' : 1 ,
+                'content' : 'hello world' ,
+                'media_files' : [
+                    'static/imgs/test.jpg' ,
+                    'static/imgs/test2.jpg' ,
+                ] ,
+                'created_time' : '10-11-2022 17:15:56 GMT' ,
+                'is_public' : false ,
+                'edited' : true ,
+                'situation' : 's' , // s => solved
+                'first_comment' : {
+                    'id' : 2 ,
+                    'auther' : {
+                        'id' : 1 ,
+                        'user_name' : 'test2' ,
+                        'profile_pic' : 'static/imgs/test3.jpg' ,
+                    } ,
+                    'content' : 'i like your post , thanks !' ,
+                    'media_files' : [] ,
+                    'created_time' : '10-11-2022 17:15:56 GMT' ,
+                    'likes' : 5 ,
+                    'dislikes' : 2
+                } 
+            }
+
+            'post2' : {
+                'id' : 2 ,
+                'content' : 'hello world post 2' ,
+                'media_files' : [
+                    'static/imgs/test22.jpg' ,
+                ] ,
+                'created_time' : '14-11-2022 17:15:56 GMT' ,
+                'is_public' : true ,
+                'edited' : false ,
+                'situation' : 'w' , // w => working on it
+                'first_comment' : null 
+            }
+
+            'post5' : {
+                'id' : 2 ,
+                'content' : '' ,
+                'media_files' : [
+                    'static/imgs/test22.jpg' ,
+                    'static/imgs/test22.jpg' ,
+                    'static/imgs/test22.jpg' ,
+                ] ,
+                'created_time' : '17-11-2022 17:15:56 GMT' ,
+                'is_public' : false ,
+                'edited' : false ,
+                'situation' : 'n' , // n => not solved yet
+                'first_comment' : null 
+            }
+        }
+    }
+
+#------------------- post API --------------------------------------------------#
+    #------------------- posts ---------------------------#
+    url : path/posts - GET
+    auth : login required
+
+    {
+        
+        '1' /*this is post id not rank*/ : {
+            'id' : 1 ,
+            'auther' : {
+                'id' : 2 ,
+                'user_name' : 'test3' ,
+                'profile_pic' : null ,
+                } ,
+            'content' : 'my first post is done' ,
+            'media_files' : [] ,
+            'created_time' : '14-11-2022 22:15:56 GMT' ,
+            'is_public' : true ,
+            'edited' : false ,
+            'situation' : 's' ,
+            'first_comment' : {
+                'id' : 2 ,
+                'auther' : {
+                    'id' : 1 ,
+                    'user_name' : 'test1' ,
+                    'profile_pic' : 'static/imgs/pic2.png' ,
+                    } ,
+                'content' : 'my comment' ,
+                'media_files' : [
+                    'comment_test.jpg'
+                ] ,
+                'created_time' : '02-01-2023 17:15:56 GMT' ,
+                'likes' : 0 ,
+                'dislikes' : 0 
+
+                } ,
+            'likes' : 1 ,
+            'dislikes' : 4 ,
+        }
+
+        '2' : {
+            'id' : 2 ,
+            'auther' : {
+                'id' : 2 ,
+                'user_name' : 'test3' ,
+                'profile_pic' : null ,
+                } ,
+            'content' : 'my first post is done' ,
+            'media_files' : [] ,
+            'created_time' : '14-11-2022 22:15:56 GMT' ,
+            'is_public' : true ,
+            'edited' : false ,
+            'situation' : 's' ,
+            'first_comment' : {
+                'id' : 2 ,
+                'auther' : {
+                    'id' : 1 ,
+                    'user_name' : 'test1' ,
+                    'profile_pic' : 'static/imgs/pic3.png' ,
+                    } ,
+                'content' : 'my comment' ,
+                'media_files' : [
+                    'comment_test.jpg'
+                ] ,
+                'created_time' : '02-01-2023 17:15:56 GMT' ,
+                'likes' : 0 ,
+                'dislikes' : 2 
+
+                } ,
+            'likes' : 3 ,
+            'dislikes' : 0 ,
+        }
+    }
+
+    #------------------- add post ---------------------------#
+    url : path/add_post - POST
+    auth : login required
+    format : json
+
+    parameters : {
+        'content' : string ,
+        'is_public' : boolean [default = true],
+        'situation' : one from ['n'(default) , 's' , 'w'] ,
+        # current_user : get it from session 
+    }
+    returned json --> true : {'id' : 2 /*post id*/}
+                --> false : {'issue':'auther or content parameters not entered'}
+
+
+    #------------------- delete post ---------------------------#
+    url : path/delete_post - POST
+    auth : login required
+
+    parameters : {
+        'post_id' : int ,
+        # current_user : get it from session 
+    }
+
+    returned json --> true : {'issue':'done'}
+                --> false : {'issue':'post_id parameter not entered'}
+
+    #------------------- like post ---------------------------#
+    url : path/like_post - POST
+    auth : login required
+
+    parameters : {
+        'post_id' : int ,
+        # current_user : get it from session 
+    }
+
+    returned json --> true : {'issue':'done'}
+                --> false : {'issue':'post_id parameter not entered'}
+
+    #------------------- dislike post ---------------------------#
+    url : path/dislike_post - POST
+    auth : login required
+
+    parameters : {
+        'post_id' : int ,
+        # current_user : get it from session 
+    }
+
+    returned json --> true : {'issue':'done'}
+                --> false : {'issue':'post_id parameter not entered'}
+
+    #------------------- save post ---------------------------#
+    url : path/save_post - POST
+    auth : login required
+
+    parameters : {
+        'post_id' : int ,
+        # current_user : get it from session 
+    }
+
+    returned json --> true : {'issue':'done'}
+                --> false : {'issue':'post_id parameter not entered'}
+
+    #------------------- unsave post ---------------------------#
+    url : path/unsave_post - POST
+    auth : login required
+
+    parameters : {
+        'post_id' : int ,
+        # current_user : get it from session 
+    }
+
+    returned json --> true : {'issue':'done'}
+                --> false : {'issue':'post_id parameter not entered'}
+
+    #------------------- hide post ---------------------------#
+    url : path/hide_post - POST
+    auth : login required
+
+    parameters : {
+        'post_id' : int ,
+        # current_user : get it from session 
+    }
+
+    returned json --> true : {'issue':'done'}
+                --> false : {'issue':'post_id parameter not entered'}
+
+    #------------------- unhide post ---------------------------#
+    url : path/unhide_post - POST
+    auth : login required
+
+    parameters : {
+        'post_id' : int ,
+        # current_user : get it from session 
+    }
+
+    returned json --> true : {'issue':'done'}
+                --> false : {'issue':'post_id parameter not entered'}
+
+    #------------------- report post ---------------------------#
+    url : path/report_post - POST
+    auth : login required
+
+    parameters : {
+        'post_id' : int ,
+        # current_user : get it from session 
+    }
+
+    returned json --> true : {'issue':'done'}
+                --> false : {'issue':'post_id parameter not entered'}
+
+    #------------------- unreport post ---------------------------#
+    url : path/unreport_post - POST
+    auth : login required
+
+    parameters : {
+        'post_id' : int ,
+        # current_user : get it from session 
+    }
+
+    returned json --> true : {'issue':'done'}
+                --> false : {'issue':'post_id parameter not entered'}
+
+#------------------- comment API --------------------------------------------------#
+    #------------------- add comment ---------------------------#
+    url : path/add_comment
+    auth : login required
+
+    parameters : {
+        'post_id' : int ,
+        'content' : string ,
+        # current_user : get it from session 
+    }
+
+    returned json --> true : {'issue':'done'}
+                --> false : {'issue':'post_id parameter not entered'}
+
+    #------------------- edit comment ---------------------------#
+    url : path/edit_comment - POST
+    auth : login required
+
+    parameters : {
+        'comment_id' : int ,
+        'new_content' : string ,
+        # current_user : get it from session 
+    }
+
+    returned json --> true : {'issue':'done'}
+                  --> false : {'issue':'comment_id or new_content parameters not entered'}
+    
+    #------------------- all post comments ----------------------#
+    url : path/comments - GET
+    auth : login required
+
+    parameters : {
+        'post_id' : int ,
+    }
+
+    {
+        '1' : {
+            'id' : 1 ,
+            'auther' : {
+                'id' : 2 ,
+                'user_name' : 'test2' ,
+                'profile_pic' : 'static/imgs/pic24.png'
+            } ,
+            'content' : 'my comment' ,
+            'media_files' : [
+                'static/imgs/test.jpg' ,
+                'static/imgs/test2.jpg'                
+            ] ,
+            'created_time' : '14-11-2022 22:15:56 GMT' ,
+            'likes' : 3 ,
+            'dislikes' : 4 ,
+        },
+
+        '2' : {
+            'id' : 2 ,
+            'auther' : {
+                'id' : 3 ,
+                'user_name' : 'test3' ,
+                'profile_pic' : 'static/imgs/pic27.png'
+            } ,
+            'content' : 'my comment' ,
+            'media_files' : [
+                'static/imgs/test7.jpg' ,
+                'static/imgs/test20.jpg'                
+            ] ,
+            'created_time' : '14-11-2022 22:15:56 GMT' ,
+            'likes' : 7 ,
+            'dislikes' : 4 ,
+        }
+    }
+

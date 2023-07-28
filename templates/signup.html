@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <title>Opps!</title>
+    <!-- --------- syle css file ------------ -->
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/signup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/common.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/takeph.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/exp.css') }}">
+    <!-- <----------- font from google ------------ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;900&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- ------- java script -------------- -->
+    <script defer src="{{ url_for('static' , filename='js/signup.js') }}" type="module"></script>
+    <script defer src="{{ url_for('static' , filename='js/exp.js') }}" type="module"></script>
+</head>
+
+<body>
+    <!-- --------- intro page --------- -->
+    <div class="container">
+        <!-- ---- sign up ---------- -->
+        <div class="loginSignUp">
+            <div class="txt-intro">
+                <h2>Welcome</h2>
+                <span>SignUp into your Account</span>
+            </div>
+            <div class="info">
+                <div class="imgUser">
+                    <letter></letter>
+                    <span class="takePhoto"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                            <path
+                                d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 384c-53 0-96-43-96-96s43-96 96-96s96 43 96 96s-43 96-96 96z" />
+                        </svg></span>
+                </div>
+                <h1>Sign Up</h1>
+                <form action="" method="post">
+                    <!-- -------- input name --------- -->
+                    <span class="username">
+                        <svg id="warn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32z" />
+                        </svg>
+                        <img src="{{ url_for('static' , filename='imgs/imgsignUp/user-solid.svg') }}" alt="">
+                        <input type="text" name="user_name" placeholder="User Name">
+                    </span>
+                    <!-- -------- input number cart --------- -->
+                    <span class="numbercart">
+                        <svg id="warn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32z" />
+                        </svg>
+                        <img src="{{ url_for('static' , filename='imgs/imgsignUp/credit-card-regular.svg') }}" alt="">
+                        <input type="number" name="card_number" value="" placeholder="number your cart">
+                    </span>
+                    <!-- -------- input password --------- -->
+                    <span class="password">
+                        <secur class="scurity">easy</secur>
+                        <svg id="warn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32z" />
+                        </svg>
+                        <img src="{{ url_for('static' , filename='imgs/imgsignUp/lock-solid.svg') }}" alt="">
+                        <input type="password" name="password" placeholder="password">
+                    </span>
+                    <!-- confirm password -->
+                    <!-- -------- input password --------- -->
+                    <span class="Confpassword">
+                        <secur class="scurity">easy</secur>
+                        <svg id="checkicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                        </svg>
+                        <svg id="warn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32z" />
+                        </svg>
+                        <img src="{{ url_for('static' , filename='imgs/imgsignUp/lock-solid.svg') }}" alt="">
+                        <input type="password" name="passWord" placeholder="confirm password">                    </span>
+                    <!-- -------- input email --------- -->
+                    <span class="email">
+                        <svg id="warn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32z" />
+                        </svg>
+                        <img src="{{ url_for('static' , filename='imgs/imgsignUp/envelope-solid.svg') }}" alt="">
+                        <input type="email" name="email" placeholder="email">
+                    </span>
+                    <!-- ----------- button ---------- -->
+                    <button id="send" name="sendInfo">SIGN UP</button>
+                </form>
+            </div>
+            <div class="haveAccount">Already have an account: <a href="{{ url_for('Oops.signin') }}" id="login">Log In</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
